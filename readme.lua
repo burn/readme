@@ -86,7 +86,8 @@ function are.tbl(s) --> ?"tab"; names ending the "s" are tables
 
 --------------------------------------------------------------------------------
 -- ## Low-level utilities
-local dump,pretty,lines,dump
+local dump,optimal,pretty,lines,dump
+
 function hint(s1,type) --> str; if we know a type, add to arg (else return arg)
     return type and s1..":`"..type .. "`" or s1 end
 
@@ -115,10 +116,9 @@ function dump() --> nil; if we have any tbl contents, print them then zap tbl
     print"\n" end
   tbl={} end 
 
---------------------------------------------------------------------------------
 -- ## Main
-function main() --> nil; for all lines on command line, print doco to standard output
-  for _,file in ipairs(arg) do
+function main(sFiles) --> nil; for all lines on command line, print doco to standard output
+  for _,file in ipairs(sFiles) do
     print("\n#",file,"\n")
     lines(file,function(line)
       if line:find"^[-][-] " then
@@ -133,4 +133,4 @@ function main() --> nil; for all lines on command line, print doco to standard o
                      end) end end) 
     dump() end  end
 
-main()
+main(arg)

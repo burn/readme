@@ -80,6 +80,6 @@ Singulars are either `bools`, `fun` (function),
 
 | What | Notes |
 |:---|:---|
-| <b>main() &rArr;  nil</b> |  for all lines on command line, print doco to standard output |
+| <b>main(sFiles:`[str]`) &rArr;  nil</b> |  for all lines on command line, print doco to standard output |
 
 
