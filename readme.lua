@@ -9,9 +9,9 @@ Options:
 
 -- Assumes a simple Hungarian notation,  infer doco from LUA files
 -- For example, this file was generated via
---
+--  
 --       lua readme.lua readme.lua > README.md
---    
+--     
 -- ## Why this code?
 -- I love documentation and I do not love most documentation 
 -- generators. 
