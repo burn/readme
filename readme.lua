@@ -23,7 +23,7 @@ Options:
 -- just a few simple naming conventions, why can't they add type
 -- hints to my favorite untyped languages (lua, lisp, etc).
 --   
--- Assumptions:
+-- ## Conventions
 --  
 -- 1. Lines with Markdown start with `-- ` (and  we will print those).
 -- 2. We only show help on public function.

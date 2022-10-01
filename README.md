@@ -2,6 +2,8 @@
 #	readme.lua	
 
 Assumes a simple Hungarian notation,  infer doco from LUA files	
+For example, this file was generated via	
+      lua readme.lua readme.lua > README.md	
    	
 ## Why this code?	
 I love documentation and I do not love most documentation 	
@@ -13,7 +15,8 @@ generated from in-line comments around the code?
 - And if I use	
 just a few simple naming conventions, why can't they add type	
 hints to my favorite untyped languages (lua, lisp, etc).	
-Assumptions:	
+  	
+## Conventions	
  	
 1. Lines with Markdown start with `-- ` (and  we will print those).	
 2. We only show help on public function.	
