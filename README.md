@@ -1,14 +1,18 @@
 
 #	readme.lua	
 
+Assumes a simple Hungarian notation,  infer doco from LUA files	
+   	
+## Why this code?	
 I love documentation and I do not love most documentation 	
-generators. Why are they so complex to use? 	
-Why can't they be really short and easy to change?	
-Why can't they just create tables for the functions,	
-generated from in-line comments around the code? And if I use	
+generators. 	
+- Why are they so complex to use? 	
+- Why can't they be really short and easy to change?	
+- Why can't they just create tables for the functions,	
+generated from in-line comments around the code? 	
+- And if I use	
 just a few simple naming conventions, why can't they add type	
 hints to my favorite untyped languages (lua, lisp, etc).	
-For example,	
 Assumptions:	
  	
 1. Lines with Markdown start with `-- ` (and  we will print those).	
