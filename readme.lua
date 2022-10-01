@@ -7,7 +7,8 @@ Usage: lua readme.lua  [-h] [file1.lua file2.lua ...] > doco.md
 Options:
  -h --help Show help]]) end
 
--- Assumes a simple Hungarian notation,  infer doco from LUA files
+-- > Assumes a simple Hungarian notation,  infer doco from LUA files
+--  
 -- For example, this file was generated via
 --  
 --       lua readme.lua readme.lua > README.md
