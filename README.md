@@ -1,6 +1,14 @@
 
 #	readme.lua	
 
+I love documentation and I do not love most documentation 	
+generators. Why are they so complex to use? 	
+Why can't they be really short and easy to change?	
+Why can't they just create tables for the functions,	
+generated from in-line comments around the code? And if I use	
+just a few simple naming conventions, why can't they add type	
+hints to my favorite untyped languages (lua, lisp, etc).	
+For example,	
 Assumptions:	
  	
 1. Lines with Markdown start with `-- ` (and  we will print those).	
@@ -31,7 +39,18 @@ Assumptions:
 
 | What | Notes |
 |:---|:---|
-| <b>are.of(s:`str`) &rArr;  ?str</b> |   top level, tries all types |
+| <b>are.of(s:`str`) &rArr;  ?str</b> |   top level, guesses a variable's type |
+
+
+Types are either singular (one thing) or plural (a set of	
+things). The naming conventions for plurals is the same as	
+singulars, we just add an `s`. E.g. `bools` is a table of	
+booleans. and `ns` is a table of `n`umbers.	
+Singulars are either `bools`, `fun` (function),	
+`n` (number), `s` (string), or `t` (table).	
+
+| What | Notes |
+|:---|:---|
 | <b>are.bool(s:`str`) &rArr;  ?"bool"</b> |  names starting with "is" are booleans |
 | <b>are.fun(s:`str`) &rArr;  ?"fun"</b> |  names ending in "fun" are functions |
 | <b>are.num(s:`str`) &rArr;  ?"n"</b> |  names start with "n" are numbers  |

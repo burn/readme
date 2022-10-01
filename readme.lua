@@ -7,6 +7,15 @@ Usage: lua readme.lua  [-h] [file1.lua file2.lua ...] > doco.md
 Options:
  -h --help Show help]]) end
 
+-- I love documentation and I do not love most documentation 
+-- generators. Why are they so complex to use? 
+-- Why can't they be really short and easy to change?
+-- Why can't they just create tables for the functions,
+-- generated from in-line comments around the code? And if I use
+-- just a few simple naming conventions, why can't they add type
+-- hints to my favorite untyped languages (lua, lisp, etc).
+--
+-- For example,
 -- Assumptions:
 --  
 -- 1. Lines with Markdown start with `-- ` (and  we will print those).
@@ -39,9 +48,24 @@ local obj= {} -- upper case class names
 local are = {} -- type hint rules
 
 -- ## Guessing types
-function are.of(s)  --> ?str;  top level, tries all types
+
+function are.of(s)  --> ?str;  top level, guesses a variable's type
   return are.plural(s) or are.singular(s) end
 
+-- Types are either singular (one thing) or plural (a set of
+-- things). The naming conventions for plurals is the same as
+-- singulars, we just add an `s`. E.g. `bools` is a table of
+-- booleans. and `ns` is a table of `n`umbers.
+function are.plural(s) 
+  if #s>1 and s:sub(#s)=="s"  then  
+    local what = are.singular(s:sub(1,#s-1))
+    return what and "["..what.."]"  or "tab" end end
+
+function are.singular(s) 
+  return obj[s] or are.str(s) or are.num(s) or are.tbl(s) or are.bool(s) or are.fun(s) end
+
+-- Singulars are either `bools`, `fun` (function),
+-- `n` (number), `s` (string), or `t` (table).
 function are.bool(s) --> ?"bool"; names starting with "is" are booleans
   if s:sub(1,2)=="is"     then return "bool" end end
 function are.fun(s)  --> ?"fun"; names ending in "fun" are functions
@@ -52,14 +76,6 @@ function are.str(s) --> ?"s"; names starting with "s" are strings
  if s:sub(1,1)=="s"      then return "str"  end end
 function are.tbl(s) --> ?"tab"; names ending the "s" are tables
  if s=="t"               then return "tab" end end
-
-function are.plural(s) 
-  if #s>1 and s:sub(#s)=="s"  then  
-    local what = are.singular(s:sub(1,#s-1))
-    return what and "["..what.."]"  or "tab" end end
-
-function are.singular(s) 
-  return obj[s] or are.str(s) or are.num(s) or are.tbl(s) or are.bool(s) or are.fun(s) end
 
 --------------------------------------------------------------------------------
 -- ## Low-level utilities
