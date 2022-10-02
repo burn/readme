@@ -1,5 +1,5 @@
 if arg[1]=="-h" or arg[1]=="--help" then os.exit(print[[
-readme.lua: Assumes a simple Hungarian notation. Infer doco from LUA files
+readme.lua: Extract doco from LUA files to Markdown. Assumes a simple Hungarian notation.
 (c) 2022 Tim Menzies <timm@ieee.org> BSD-2clause license
 
 Usage: lua readme.lua  [-h] [file1.lua file2.lua ...] > doco.md
@@ -7,7 +7,7 @@ Usage: lua readme.lua  [-h] [file1.lua file2.lua ...] > doco.md
 Options:
  -h --help Show help]]) end
 
--- > Assumes a simple Hungarian notation,  infer doco from LUA files
+-- > Extract doco from LUA files to Markdown. Assumes a simple Hungarian notation.
 --  
 -- For example, this file was generated via
 --  
@@ -45,10 +45,10 @@ Options:
 -- | 2 blanks    | 2 blanks denote start of optional arguments   |
 -- | 4 blanks    | 4 blanks denote start of local arguments      |
 -- | n           | prefix for numerics                           |
--- | s           | prefix for strings                            |
 -- | is          | prefix for booleans                           |
+-- | s           | prefix for strings                            |
+-- | suffix s    | list of thing (so `sfiles` is list of strings)|
 -- | suffix fun  | suffix for functions                          |                      
--- | suffix s    | list of thing (so `names` is list of strings) |]]) end
 --     
 --------------------------------------------------------------------------------
 local tbl= {} -- table of contents. dumped  (then reset) before every new heading
