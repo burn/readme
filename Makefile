@@ -1,6 +1,14 @@
+#                            __                          
+#                           /\ \                         
+#  _ __     __      __      \_\ \     ___ ___       __   
+# /\`'__\ /'__`\  /'__`\    /'_` \  /' __` __`\   /'__`\ 
+# \ \ \/ /\  __/ /\ \L\.\_ /\ \L\ \ /\ \/\ \/\ \ /\  __/ 
+#  \ \_\ \ \____\\ \__/.\_\\ \___,_\\ \_\ \_\ \_\\ \____\
+#   \/_/  \/____/ \/__/\/_/ \/__,_ / \/_/\/_/\/_/ \/____/
+
 MAKEFLAGS += --silent
 SHELL=/bin/bash
-R=$(shell git rev-parse --show-toplevel)
+R=$(shell dirname $(shell git rev-parse --show-toplevel))
 
 help: ## print help
 	printf "\n#readme\nmake [OPTIONS]\n\nOPTIONS:\n"
