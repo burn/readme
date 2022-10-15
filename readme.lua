@@ -29,8 +29,8 @@ Options:
 -- 1. Lines with Markdown start with `-- ` (and  we will print those).
 -- 2. We only show help on public function.
 -- 3. Public functions are denoted with a  trailing "-->", followed by 
---    return type then some comment text. e.g.     
---    `function fred(s) --> str; Returns `s`, written as a string`   
+--    return type then some comment text. e.g.         
+--    `function fred(s) --> str; Returns `s`, written as a string`      
 --    Note the semi-colon. Do not skip it (its important).
 -- 4. In public function arguments, lower case versions of class type 
 --    (e.g. `data`) are instances of that type (e.g.  `data` are `DATA` 
@@ -67,7 +67,7 @@ function are.of(s)  --> ?str;  top level, guesses a variable's type
 function are.plural(s) 
   if #s>1 and s:sub(#s)=="s"  then  
     local what = are.singular(s:sub(1,#s-1))
-    return what and "["..what.."]"  or "tab" end end
+    return what and "("..what..")+"  or "tab" end end
 
 function are.singular(s) 
   return obj[s] or are.str(s) or are.num(s) or are.tbl(s) or are.bool(s) or are.fun(s) end
