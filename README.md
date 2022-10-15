@@ -1,7 +1,7 @@
 
 #	readme.lua	
 
-> Assumes a simple Hungarian notation,  infer doco from LUA files	
+> Extract doco from LUA files to Markdown. Assumes a simple Hungarian notation.	
  	
 For example, this file was generated via	
  	
@@ -34,16 +34,16 @@ hints to my favorite untyped languages (lua, lisp, etc).
    leading letters is a class; e.g. DATA	
 7. Public function arguments have the following type hints:	
    	
-| What        | Notes                                         |                                     	
-|:------------|:----------------------------------------------|	
-| 2 blanks    | 2 blanks denote start of optional arguments   |	
-| 4 blanks    | 4 blanks denote start of local arguments      |	
-| n           | prefix for numerics                           |	
-| s           | prefix for strings                            |	
-| is          | prefix for booleans                           |	
-| suffix fun  | suffix for functions                          |                      	
-| suffix s    | list of thing (so `names` is list of strings) |]]) end	
-    	
+What        | Notes                                                                            	
+:------------|:--------------------------------------------	
+2 blanks    | 2 blanks denote start of optional arguments 	
+4 blanks    | 4 blanks denote start of local arguments   	
+n           | prefix for numerics                       	
+is          | prefix for booleans                   	
+s           | prefix for strings                   	
+suffix s    | list of thing (so `sfiles` is list of strings)	
+suffix fun  | suffix for functions                                            	
+  	
 ## Guessing types	
 
 | What | Notes |

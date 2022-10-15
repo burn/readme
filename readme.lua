@@ -40,16 +40,16 @@ Options:
 --    leading letters is a class; e.g. DATA
 -- 7. Public function arguments have the following type hints:
 --    
--- | What        | Notes                                         |                                     
--- |:------------|:----------------------------------------------|
--- | 2 blanks    | 2 blanks denote start of optional arguments   |
--- | 4 blanks    | 4 blanks denote start of local arguments      |
--- | n           | prefix for numerics                           |
--- | is          | prefix for booleans                           |
--- | s           | prefix for strings                            |
--- | suffix s    | list of thing (so `sfiles` is list of strings)|
--- | suffix fun  | suffix for functions                          |                      
---     
+-- What        | Notes                                                                            
+-- :------------|:--------------------------------------------
+-- 2 blanks    | 2 blanks denote start of optional arguments 
+-- 4 blanks    | 4 blanks denote start of local arguments   
+-- n           | prefix for numerics                       
+-- is          | prefix for booleans                   
+-- s           | prefix for strings                   
+-- suffix s    | list of thing (so `sfiles` is list of strings)
+-- suffix fun  | suffix for functions                                            
+--   
 --------------------------------------------------------------------------------
 local tbl= {} -- table of contents. dumped  (then reset) before every new heading
 local obj= {} -- upper case class names
