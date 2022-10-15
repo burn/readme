@@ -32,8 +32,8 @@ hints to my favorite untyped languages (lua, lisp, etc).
 1. Lines with Markdown start with `-- ` (and  we will print those).	
 2. We only show help on public function.	
 3. Public functions are denoted with a  trailing "-->", followed by 	
-   return type then some comment text. e.g.   	
-     `function fred(s) --> str; Returns `s`, written as a string`      	
+   return type then some comment text. e.g.<br> 	
+     `function fred(s) --> str; Returns `s`, written as a string`<br>   	
    Note the semi-colon. Do not skip it (its important).	
 4. In public function arguments, lower case versions of class type 	
    (e.g. `data`) are instances of that type (e.g.  `data` are `DATA` 	
