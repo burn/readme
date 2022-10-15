@@ -1,5 +1,5 @@
 if arg[1]=="-h" or arg[1]=="--help" then os.exit(print[[
-readme.lua: Extract doco from LUA files to Markdown. Assumes a simple Hungarian notation.
+readme.lua: LUA to Markdown. Assumes a simple Hungarian notation.
 (c) 2022 Tim Menzies <timm@ieee.org> BSD-2clause license
 
 Usage: lua readme.lua  [-h] [file1.lua file2.lua ...] > doco.md
