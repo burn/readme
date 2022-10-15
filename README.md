@@ -1,4 +1,4 @@
-```svg
+```css
 readme.lua: Extract doco from LUA files to Markdown. Assumes a simple Hungarian notation.
 (c) 2022 Tim Menzies <timm@ieee.org> BSD-2clause license
 
