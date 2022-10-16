@@ -1,11 +1,12 @@
 if arg[1]=="-h" or arg[1]=="--help" then os.exit(print[[
+  
 readme.lua: LUA to Markdown. Assumes a simple Hungarian notation.
 (c) 2022 Tim Menzies <timm@ieee.org> BSD-2clause license
 
 Usage: lua readme.lua  [-h] [file1.lua file2.lua ...] > doco.md
 
 Options:
- -h --help Show help]]) end
+ -h --help Show help ]]) end
 
 -- > Extract doco from LUA files to Markdown. Assumes a simple Hungarian notation.
 --  
@@ -22,7 +23,7 @@ Options:
 -- generated from in-line comments around the code? 
 -- - And if I use
 -- just a few simple naming conventions, why can't they add type
--- hints to my favorite untyped languages (lua, lisp, etc).
+-- hints to my favorite untyped languages (lua, lisp, etc)?
 --   
 -- ## Conventions
 --  
@@ -30,7 +31,7 @@ Options:
 -- 2. We only show help on public function.
 -- 3. Public functions are denoted with a  trailing "-->", followed by 
 --    return type then some comment text. e.g.<br> 
---      `function fred(s) --> str; Returns `s`, written as a string`<br>   
+--    `function fred(s) --> str; Returns `s`, written as a string`<br>   
 --    Note the semi-colon. Do not skip it (its important).
 -- 4. In public function arguments, lower case versions of class type 
 --    (e.g. `data`) are instances of that type (e.g.  `data` are `DATA` 
@@ -41,7 +42,7 @@ Options:
 -- 7. Public function arguments have the following type hints:
 --    
 -- What        | Notes                                                                            
--- :------------|:--------------------------------------------
+-- :-----------|:--------------------------------------------
 -- 2 blanks    | 2 blanks denote start of optional arguments 
 -- 4 blanks    | 4 blanks denote start of local arguments   
 -- n           | prefix for numerics                       
